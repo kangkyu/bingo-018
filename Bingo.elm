@@ -18,22 +18,23 @@ viewPlayer name gameNumber =
     h2 [ id "info", class "classy"]
       [ playerInfoText ]
 
-viewHeader : Html msg
-viewHeader =
+viewHeader : String -> Html msg
+viewHeader title =
   header [ ]
-    [ h1 [ ] [ text "Bingo!"]
+    [ h1 [ ] [ text title ]
     ]
 
 viewFooter : Html msg
 viewFooter =
   footer [ ]
-    [ a [ ] [ text "Powered by Pragstudio"]
+    [ a [ href "http://elm-lang.org"]
+      [ text "Powered by Elm"]
     ]
 
 view : Html msg
 view =
-  div []
-    [ viewHeader
+  div [ class "content"]
+    [ viewHeader "Bingo!"
     , viewPlayer "Mike" 3
     , viewFooter
     ]
