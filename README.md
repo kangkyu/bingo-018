@@ -2,7 +2,9 @@ README
 ===
 
 ```
-elm reactor
+npm install -g elm-live
+
+elm-live Bingo.elm --open --warn --output bingo.js
 ```
 
-and open [http://localhost:8000/Bingo.elm](http://localhost:8000/Bingo.elm)
+and see if [http://localhost:8000/](http://localhost:8000/) opens.
